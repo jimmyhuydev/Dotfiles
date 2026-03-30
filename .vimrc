@@ -19,8 +19,10 @@ silent! endwhile
 " Allow backspacing over everything in insert mode.
 set backspace=indent,eol,start
 
-"set ai			" always set autoindenting on
+set ai			" always set autoindenting on
 "set backup		" keep a backup file
+set mouse=a		" enable mouse
+set ignorecase		" do case insensitive matching
 set viminfo='20,\"50	" read/write a .viminfo file, don't store more
 			" than 50 lines of registers
 set history=50		" keep 50 lines of command line history
@@ -130,3 +132,15 @@ let &guicursor = &guicursor . ",a:blinkon0"
 if filereadable("/etc/vimrc.local")
   source /etc/vimrc.local
 endif
+
+" Enable syntax highlighting
+if has ("syntax")
+   syntax on
+endif
+
+" Set file indent on
+filetype indent on
+set smartindent
+autocmd BufRead,BufWritePre *.sh normal gg=G
+
+" Edit by Jimmy Nguyen
