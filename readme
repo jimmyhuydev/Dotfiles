@@ -1,0 +1,13 @@
+# Dotfiles has .files which are the hidden configuration file
+
+# Description: This dotfiles are for my own configuration
+
+# Notes:
+# .profile : login shell --> purpose: environment variable, PATH
+# .bashrc : interactive non-login shells --> purpose: alliases, prompt, shell behavior
+
+# command to view current basrc file --> cat ~/.bashrc
+# view dotfile command --> ls -la ~
+# Using starship prompt
+#
+
